@@ -1,12 +1,12 @@
 #include "monty.h"
+
 /**
- *f_mul - function to multiply two top element
+ *f_swap - function that swap top two element.
  *@head: parameter for stack head
- *@counter: parameter for line counter
+ *@counter: counts line number
  *Return: return nothing
- *
  */
-void mul(stack_t **head, unsigned int counter)
+void swap(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 	int len = 0, aux;
@@ -19,15 +19,14 @@ void mul(stack_t **head, unsigned int counter)
 	}
 	if (len < 2)
 	{
-		fprintf(stderr, "L%d: can't mul, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", counter);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	h = *head;
-	aux = h->next->n * h->n;
-	h->next->n = aux;
-	*head = h->next;
-	free(h);
+	aux = h->n;
+	h->n = h->next->n;
+	h->next->h = aux;
 }

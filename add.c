@@ -1,14 +1,14 @@
 #include "monty.h"
 
 /**
- *f_add - function to add the two element of stack
+ *add - function to add the two element of stack
  *@head: head of a stack
  *@counter: counts the line number
  *Return: return nothing
  */
-void f_add(stack_t **head, unsigned int counter)
+void add(stack_t **head, unsigned int counter)
 {
-	stack_h *h;
+	stack_t *h;
 	int len = 0, aux;
 
 	h = *head;

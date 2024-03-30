@@ -37,11 +37,12 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 /**
- *
- *
- *
- *
- *
+ *struct bus_t - variable - args, file, line content
+ *@arg: arguments value
+ *@file: pointer to monty file
+ *@content: line content parameter
+ *@lifi: flag change stack - queue
+ *Description: this carries values through the program
  */
 typedef struct bus_s
 {
@@ -51,6 +52,27 @@ typedef struct bus_s
 	int lifi;
 } bus_t;
 
+void add(stack_t **head, unsigned int counter);
+void add_node(stack_t **head, int n);
+void divide(stack_t **head, unsigned int counter);
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
+void freestack(stack_t *head);
+void modlus(stack_t **head, unsigned int counter);
+void mul(stack_t **head, unsigned int counter);
+void nothing(stack_t **head, unsigned int counter);
+void pall(stack_t **head, unsigned int counter);
+void pchar(stack_t **head, unsigned int counter);
+void pint(stack_t **head, unsigned int counter);
+void pop(stack_t **head, unsigned int counter);
+void print_string(stack_t **head, unsigned int counter);
+void push(stack_t **head, unsigned int counter);
+void queue(stack_t **head, unsigned int counter);
+void addqueue(stack_t **head, int n);
+void rotl(stack_t **head, __attribute__ ((unsued)) unsigned int counter);
+void rotr(stack_t **head, __attribute__ ((unsued)) unsigned int counter);
+void stack(stack_t **head, unsigned int counter);
+void sub(stack_t **head, unsigned int counter);
+void swap(stack_t **head, unsigned int counter);
 
 #endif
 

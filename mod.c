@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
- *f_modl - function that computes the division of the second
+ *f_modlus - function that computes the division of the second
  *top element of stack by the top element
  *@head: parameter for head of stack
  *@counter: parameter for line counter
  *Return: return nothing
  */
-void f_modl(stack_t **head, unsigned int counter)
+void modlus(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 	int len = 0, aux;
