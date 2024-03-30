@@ -7,7 +7,7 @@
  *@counter: counts line number
  *Return: return nothing
  */
-void pchar(stack_t **head, unsigned int counter)
+void f_pchar(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 

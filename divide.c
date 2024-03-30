@@ -6,7 +6,7 @@
  *@counter: counts the line number
  *Return: return nothing.
  */
-void divide(stack_t **head, unsigned int counter)
+void f_divide(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 	int len = 0, aux;

@@ -6,7 +6,7 @@
  *@counter: count line number
  *Return: return nothing
  */
-void sub(stack_t **head, unsigned int counter)
+void f_sub(stack_t **head, unsigned int counter)
 {
 	stack_t *aux;
 	int sus, nodes;

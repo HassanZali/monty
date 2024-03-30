@@ -6,7 +6,7 @@
  *@counter: counts line number
  *Return: return nothing
  */
-void stack(stack_t **head, unsigned int counter)
+void f_stack(stack_t **head, unsigned int counter)
 {
 	(void)head;
 	(void)counter;

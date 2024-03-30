@@ -6,7 +6,7 @@
  *@counter: counts line number
  *Return: return nothing
  */
-void rotr(stack_t **head, __attribute__ ((unsued)) unsigned int counter)
+void f_rotr(stack_t **head, __attribute__ ((unsued)) unsigned int counter)
 {
 	stack_t *copy;
 

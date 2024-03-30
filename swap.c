@@ -6,7 +6,7 @@
  *@counter: counts line number
  *Return: return nothing
  */
-void swap(stack_t **head, unsigned int counter)
+void f_swap(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 	int len = 0, aux;
