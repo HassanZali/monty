@@ -1,5 +1,5 @@
-#define MONTY_H
 #ifndef MONTY_H
+#define MONTY_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -24,19 +24,6 @@ typedef struct stack_s
         struct stack_s *next;
 } stack_t;
 /**
- * struct instruction_s - opcode and its function
- * @opcode: the opcode
- * @f: function to handle the opcode
- *
- * Description: opcode and its function
- * for stack, queues, LIFO, FIFO
- */
-typedef struct instruction_s
-{
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
-} instruction_t;
-/**
  *struct bus_t - variable - args, file, line content
  *@arg: arguments value
  *@file: pointer to monty file
@@ -51,6 +38,12 @@ typedef struct bus_s
 	char *content;
 	int lifi;
 } bus_t;
+/**                                            * struct instruction_s - opcode and its function                                            * @opcode: the opcode
+ * @f: function to handle the opcode           *                                             * Description: opcode and its function        * for stack, queues, LIFO, FIFO               */                                           typedef struct instruction_s
+{
+	char *opcode; 
+	void (*f)(stack_t **stack, unsigned int line_number);
+} instruction_t;
 
 void f_add(stack_t **head, unsigned int counter);
 void add_node(stack_t **head, int n);
@@ -68,8 +61,8 @@ void f_print_string(stack_t **head, unsigned int counter);
 void f_push(stack_t **head, unsigned int counter);
 void f_queue(stack_t **head, unsigned int counter);
 void addqueue(stack_t **head, int n);
-void f_rotl(stack_t **head, __attribute__ ((unsued)) unsigned int counter);
-void f_rotr(stack_t **head, __attribute__ ((unsued)) unsigned int counter);
+void f_rotl(stack_t **head, __attribute__ ((unused)) unsigned int counter);
+void f_rotr(stack_t **head, __attribute__ ((unused)) unsigned int counter);
 void f_stack(stack_t **head, unsigned int counter);
 void f_sub(stack_t **head, unsigned int counter);
 void f_swap(stack_t **head, unsigned int counter);

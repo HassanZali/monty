@@ -1,5 +1,6 @@
 #include "monty.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  *f_sub - function to subtract
  *@head: stack head parameter
@@ -19,7 +20,7 @@ void f_sub(stack_t **head, unsigned int counter)
 		fprintf(stderr, "L%d: can't sub, stack too short\n", counter);
 		fclose(bus.file);
 		free(bus.file);
-		free_stack(*head);
+		freestack(*head);
 		exit(EXIT_FAILURE);
 	}
 	aux = *head;

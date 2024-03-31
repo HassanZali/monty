@@ -1,5 +1,6 @@
 #include "monty.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  *f_modlus - function that computes the division of the second
  *top element of stack by the top element
@@ -23,7 +24,7 @@ void f_modlus(stack_t **head, unsigned int counter)
 		fprintf(stderr, "L%d: can't mod, stack too short\n", counter);
 		fclose(bus.file);
 		free(bus.content);
-		free_stack(*head);
+		freestack(*head);
 		exit(EXIT_FAILURE);
 	}
 	h = *head;
@@ -32,7 +33,7 @@ void f_modlus(stack_t **head, unsigned int counter)
 		fprintf(stderr, "L%d: division by zero\n", counter);
 		fclose(bus.file);
 		free(bus.content);
-		free_stack(*head);
+		freestack(*head);
 		exit(EXIT_FAILURE);
 	}
 	aux = h->next->n % h->n;

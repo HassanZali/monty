@@ -1,4 +1,5 @@
 #include "monty.h"
+#include <stdio.h>
 
 /**
  *freestack - function to free a doubly linked list

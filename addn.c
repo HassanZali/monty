@@ -1,5 +1,6 @@
 #include "monty.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  *add_node - function to add node to stack
  *@head: head of the stack

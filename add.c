@@ -1,7 +1,8 @@
 #include "monty.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
- *add - function to add the two element of stack
+ *f_add - function to add the two element of stack
  *@head: head of a stack
  *@counter: counts the line number
  *Return: return nothing
@@ -22,7 +23,7 @@ void f_add(stack_t **head, unsigned int counter)
 		fprintf(stderr, "L%d: can't add, stack too short\n", counter);
 		fclose(bus.file);
 		free(bus.content);
-		free_stack(*head);
+		freestack(*head);
 		exit(EXIT_FAILURE);
 	}
 	h = *head;

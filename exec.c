@@ -1,5 +1,6 @@
 #include "monty.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  *execute - function to execute opcode.
  *@stack: head linked list of stack
@@ -11,20 +12,20 @@
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
 	instruction_t opst[] = {
-		{"push", f_push}, {"pall", f_pall}, {"print", f_print},
+		{"push", f_push}, {"pall", f_pall}, {"pint", f_pint},
 		{"pop", f_pop},
 		{"swap", f_swap},
 		{"add", f_add},
-		{"nop", f_nop},
+		{"nop", f_nothing},
 		{"sub", f_sub},
-		{"div", f_div},
+		{"div", f_divide},
 		{"mul", f_mul},
-		{"mod", f_mod},
+		{"mod", f_modlus},
 		{"pchar", f_pchar},
-		{"pstr", f_pstr},
+		{"pstr", f_print_string},
 		{"rotl", f_rotl},
 		{"rotr", f_rotr},
-		{"queue", f_queue},
+		{"queue", addqueue},
 		{"stack", f_stack},
 		{NULL, NULL}
 	};
@@ -48,7 +49,7 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 	{ fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
 		fclose(file);
 		free(content);
-		free_stack(*stack);
+		freestack(*stack);
 		exit(EXIT_FAILURE);
 	}
 	return (1);
